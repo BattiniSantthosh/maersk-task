@@ -1,0 +1,158 @@
+:root {
+  --bg1-color: #6f98a8;
+  --bg2-color: #2b8ead;
+  --bg3-color: #2f454e;
+  --bg4-color: #bfbfbf;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+  height: 100%;
+  flex-direction: row;
+}
+
+.flex-container .cards {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container .cards .card {
+  flex: 1 0 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: bold;
+}
+.flex-container .buttons {
+  width: 25%;
+  padding: 1.5rem;
+}
+.flex-container .buttons .button {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--bg2-color);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--bg1-color);
+  width: 100%;
+  margin: 0.5rem 0rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.flex-container .buttons .button:hover {
+  background-color: var(--bg3-color);
+}
+
+.flex-container .buttons .button:active {
+  background-color: var(--bg3-color);
+  box-shadow: 0 5px var(--bg1-color);
+  transform: translateY(4px);
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-container .cards {
+    order: 2;
+    width: 100%;
+    padding: 0.25rem;
+  }
+  .flex-container .cards .card {
+    flex: unset;
+    width: 100%;
+
+    font-size: 1rem;
+    color: #222222;
+    margin: 0.25rem 0rem;
+    padding: 0.5rem;
+    background-color: #ccc;
+  }
+  .flex-container .buttons {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .flex-container .buttons .button {
+    order: 1;
+    width: 40%;
+    margin: 0rem 0.5rem;
+  }
+
+  #card1 {
+    border-left: 6px solid var(--b1-color, #6f98a8);
+  }
+  #card2 {
+    border-left: 6px solid var(--b2-color, #2b8ead);
+  }
+  #card3 {
+    border-left: 6px solid var(--b3-color, #2f454e);
+  }
+  #card4 {
+    border-left: 6px solid var(--b2-color, #2b8ead);
+  }
+  #card5 {
+    border-left: 6px solid var(--b3-color, #2f454e);
+  }
+  #card6 {
+    border-left: 6px solid var(--b4-color, #bfbfbf);
+  }
+  #card7 {
+    border-left: 6px solid var(--b4-color, #bfbfbf);
+  }
+  #card8 {
+    border-left: 6px solid var(--b1-color, #6f98a8);
+  }
+  #card9 {
+    border-left: 6px solid var(--b3-color, #2f454e);
+  }
+}
+@media only screen and (min-width: 600px) {
+  #card1 {
+    background-color: var(--b1-color, #6f98a8);
+  }
+  #card2 {
+    background-color: var(--b2-color, #2b8ead);
+  }
+  #card3 {
+    background-color: var(--b3-color, #2f454e);
+  }
+  #card4 {
+    background-color: var(--b2-color, #2b8ead);
+  }
+  #card5 {
+    background-color: var(--b3-color, #2f454e);
+  }
+  #card6 {
+    background-color: var(--b4-color, #bfbfbf);
+  }
+  #card7 {
+    background-color: var(--b4-color, #bfbfbf);
+  }
+  #card8 {
+    background-color: var(--b1-color, #6f98a8);
+  }
+  #card9 {
+    background-color: var(--b3-color, #2f454e);
+  }
+}
